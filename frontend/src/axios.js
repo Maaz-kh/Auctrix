@@ -15,6 +15,7 @@ export const getRequest = async (url, params = {}) => {
       params,
     });
     return response.data;
+    
   } catch (error) {
     console.error("GET Request Error:", error);
     throw error;
@@ -39,8 +40,7 @@ export const postRequest = async (url, data = {}) => {
 
 // Generic PUT request
 export const putRequest = async (url, data = {}) => {
-  console.log("In Functikn");
-  console.log(data);
+
   try {
     const response = await axios.put(url, data, {
       headers: {

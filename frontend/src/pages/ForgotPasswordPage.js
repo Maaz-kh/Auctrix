@@ -53,7 +53,7 @@ const ForgotPasswordPage = () => {
       }
 
       await postRequest("http://localhost:5000/api/user/forget-password/verify", {
-        email,
+        email, 
         otp,
         password: newPassword,
       });

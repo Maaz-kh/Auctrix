@@ -3,10 +3,7 @@ const User = require("../models/userModel");
 const dotenv = require("dotenv").config()
 
 function generateTokens(user) {
-  const accessToken = jwt.sign(
-    { userId: user._id, userRole: user.role },
-    process.env.JWT_SECRET,
-    { expiresIn: "15d" }
+  const accessToken = jwt.sign({ userId: user._id, userRole: user.role }, process.env.JWT_SECRET,{ expiresIn: "1h" }
   );
   return accessToken;
 }
@@ -90,7 +87,4 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = {
-    register, 
-    login
-}
+module.exports = {register, login }

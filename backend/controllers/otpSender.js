@@ -63,7 +63,6 @@ const generateOtp = async (req, res) => {
     }
 };
   
-
 // Route to verify OTP
 const verifyOtp = async (req, res) => {
     const { email, otp, password } = req.body;
@@ -101,7 +100,4 @@ const verifyOtp = async (req, res) => {
     }
 };
   
-module.exports = {
-    generateOtp,
-    verifyOtp
-};
+module.exports = {generateOtp, verifyOtp };

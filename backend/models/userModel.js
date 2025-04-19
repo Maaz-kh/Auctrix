@@ -29,22 +29,14 @@ const userSchema = new mongoose.Schema(
       type: String,
     },
     address: {
-      houseNumber: { type: String },
-      streetNumber: { type: String },
-      streetName: { type: String },
-      city: { type: String },
+      type: String,
     },
     profileImage: {
       type: String,
-      default: null,
+      default: 'https://icon-library.com/images/default-user-icon/default-user-icon-8.jpg',
     },
 
     // Seller-Specific Fields
-    personalInfo: {
-      firstName: { type: String, trim: true },
-      lastName: { type: String, trim: true },
-      phone: { type: String, trim: true },
-    },
     businessInfo: {
       businessName: { type: String, trim: true },
       taxId: { type: String, trim: true },
@@ -64,7 +56,7 @@ const userSchema = new mongoose.Schema(
     },
   },
   {
-    timestamps: true, // Automatically adds createdAt and updatedAt fields
+    timestamps: true,
   }
 );
 

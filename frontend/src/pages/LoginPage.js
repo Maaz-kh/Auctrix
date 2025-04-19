@@ -14,27 +14,25 @@ const LoginPage = () => {
 
   const handleGoogleSignIn = async () => {
     try {
-      toast.error("Our Team is working on this issue");
+      toast.error("This feature is not Implemented Yet!");
     } catch (error) {
       console.error("Google Sign-In Error:", error);
-      // Handle sign-in error
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
     if (!emailRegex.test(email)) {
       toast.error("Invalid email");
       return;
     }
 
-    const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!passwordRegex.test(password)) {
-      toast.error(
-        "Weak password: must include 1 lowercase, 1 uppercase, 1 number, and 1 special character"
-      );
+      toast.error("Weak password: must include 1 lowercase, 1 uppercase, 1 number, and 1 special character");
+      
       return;
     }
 
@@ -75,8 +73,7 @@ const LoginPage = () => {
               className="mx-auto mb-4"
               src={require("../images/logo-with-txt.png")}
               alt="Logo"
-              style={{ width: "175px" }}
-            />
+              style={{ width: "175px" }}/>
             <p className="text-gray-500">Sign in to continue to your account</p>
           </div>
 
@@ -84,8 +81,7 @@ const LoginPage = () => {
           <div className="space-y-4">
             <button
               onClick={handleGoogleSignIn}
-              className="w-full flex items-center justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
-            >
+              className="w-full flex items-center justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
               <FcGoogle className="mr-2" size={24} />
               Continue with Google
             </button>
@@ -101,8 +97,7 @@ const LoginPage = () => {
             <div className="relative">
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
+                className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address
               </label>
               <div className="relative">
@@ -113,20 +108,18 @@ const LoginPage = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Enter your email"
-                  required
-                />
+                  required/>
+                
                 <Mail
                   className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                  size={20}
-                />
+                  size={20}/>
               </div>
             </div>
 
             <div className="relative">
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
+                className="block text-sm font-medium text-gray-700 mb-2">
                 Password
               </label>
               <div className="relative">
@@ -137,18 +130,18 @@ const LoginPage = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Enter your password"
-                  required
-                />
+                  required/>
+                
                 <Lock
                   className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                  size={20}
-                />
+                  size={20}/>
+                
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                >
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
                   {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                
                 </button>
               </div>
             </div>
@@ -158,12 +151,10 @@ const LoginPage = () => {
                 <input
                   id="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                />
+                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"/>
                 <label
                   htmlFor="remember-me"
-                  className="ml-2 block text-sm text-gray-900"
-                >
+                  className="ml-2 block text-sm text-gray-900">
                   Remember me
                 </label>
               </div>
@@ -171,8 +162,7 @@ const LoginPage = () => {
               <div className="text-sm">
                 <Link
                   to="/ForgotPassword"
-                  className="font-medium text-blue-600 hover:text-blue-500"
-                >
+                  className="font-medium text-blue-600 hover:text-blue-500">
                   Forgot password?
                 </Link>
               </div>
@@ -180,8 +170,7 @@ const LoginPage = () => {
 
             <button
               type="submit"
-              className="bg-blue w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-            >
+              className="bg-blue w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
               Sign In
             </button>
           </form>
@@ -191,8 +180,7 @@ const LoginPage = () => {
               Don't have an account?{" "}
               <Link
                 to="/Register"
-                className="font-medium text-blue-600 hover:text-blue-500"
-              >
+                className="font-medium text-blue-600 hover:text-blue-500">
                 Register
               </Link>
             </p>

@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Auctrix - Auction Management System 🏷️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Auctrix is a comprehensive Auction Management System built with the MERN Stack. It facilitates seamless auctioning of products by providing tailored experiences for different user roles — Sellers, Bidders and Admins. It supports real-time bidding, robust auction tracking, and insightful analytics.
 
-## Available Scripts
+## 🚀 Tech Stack
 
-In the project directory, you can run:
+- **Frontend:** React, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Others:** Axios, Chart libraries
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📄 Functionality Overview (Admin Pannel)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🔐 Authentication Pages
+- **Login & Register:** Secure sign up and sign in for Bidders, Sellers, and Admins with role-based navigation.
 
-### `npm test`
+### 🧑‍💼 Admin Dashboard
+- Overview of Total Active Auctions, Total Sellers, Total Bidders.
+- Shows Recent Completed/Expired Auctions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 👤 Profile Page
+- Users can view and update profile info.
+- Sellers can update their business details and images.
 
-### `npm run build`
+### 📦 Manage Sellers Page
+- Shows all the active sellers with their username, email, and contact info.
+- Admin can also remove the seller
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📦 Manage Bidders Page
+- Shows all the active bidders with their username, email, and contact info.
+- Admin can also remove the bidder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ➕ Products Approval Page
+- Lists all the pending products that are listed by sellers and are waiting to be approved by Admin for Auctioning.
+- Admin will view the product details and can approve or decline the product for Auction.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🎯 Active Auctions Page
+- Lists all ongoing auctions with filtering and search.
+- Shows countdown timers, current bidder and bid amoint, and seller info.
 
-### `npm run eject`
+### 📚 Auction History Page
+- Displays completed and expired auctions.
+- Users can search and filter past auctions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 📈 Admin Analytics Page
+- Quick stats on total, successful, and expired auctions.
+- Bid activity per Product category (bar chart).
+- Top performing sellers (table).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
