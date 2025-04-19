@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 backend/.env
+frontend/.gitignore
+
 # testing
 /coverage
 ProductImages/
